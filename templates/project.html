@@ -16,10 +16,10 @@
     <div class="container">
         <div class="profile-info">
             <h3>Description</h3>
-            <p>{{ .Project.Description }}</p>
+            <p>{{ .Project.Readme }}</p>
             <h3>Screenshots</h3>
             {{ range .Project.Screenshots }}
-            <img src="/static/images/{{ . }}" alt="Screenshot">
+            <img src="/static/images/projects{{ . }}" alt="Screenshot">
             {{ end }}
             <p><a href="{{ .Project.GitHubLink }}">GitHub Repository</a></p>
         </div>
