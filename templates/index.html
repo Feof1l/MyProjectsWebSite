@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h3>About Me</h3>
+            <div class="about-me">
+                <h4>Name:</h4>
+                <p>{{ .AboutMe.Name }}</p>
+            </div>
+            <div class="about-me">
+                <h4>Location:</h4>
+                <p>{{ .AboutMe.Location }}</p>
+            </div>
+            <div class="about-me">
+                <h4>Age:</h4>
+                <p>{{ .AboutMe.Age }}</p>
+            </div>
+            <div class="about-me">
+                <h4>Contacts:</h4>
+                <div class="contacts">
+                    <a href="{{ .Contacts.GitHub }}" target="_blank">GitHub</a>
+                    <a href="{{ .Contacts.LinkedIn }}" target="_blank">LinkedIn</a>
+                    <a href="mailto:{{ .Contacts.Email }}" target="_blank">Email</a>
+                    <a href="{{ .Contacts.Telegram }}" target="_blank">Telegram</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h3>Education</h3>
+            <h4>{{ .Education.University }}</h4>
+            <p>{{ .Education.Department }}</p>
+        </div>
+        <div class="section">
+            <h3>Workplace</h3>
+            {{ range .Workplaces }}
+            <div class="workplace">
+                <h4 class="company"><strong>{{ .Company }}</strong></h4>
+                <p class="position"><em>{{ .Duration }}</em></p>
+                <p><strong>Position:</strong> {{ .Position }}</p>
+                <p>{{ .Description }}</p>
+            </div>
+            {{ end }}
+        </div>
+        <div class="section">
+            <h3>Work Stack</h3>
+            <div>
+                <h4>Programming Languages</h4>
+                {{ range .WorkStack.Languages }}
+                <span class="skill">{{ . }}</span>
+                {{ end }}
+            </div>
+            <div>
+                <h4>Frameworks</h4>
+                {{ range .WorkStack.Frameworks }}
+                <span class="skill">{{ . }}</span>
+                {{ end }}
+            </div>
+            <div>
+                <h4>Databases</h4>
+                {{ range .WorkStack.Databases }}
+                <span class="skill">{{ . }}</span>
+                {{ end }}
+            </div>
+            <div>
+                <h4>Other Skills</h4>
+                {{ range .WorkStack.Others }}
+                <span class="skill">{{ . }}</span>
+                {{ end }}
+            </div>
+        </div>
+        <div class="section">
+            <h3>Projects</h3>
+            <ul class="project-list">
+                {{ range .Projects }}
+                <li class="project-item">
+                    <h4><a href="/project/{{ .Name }}">{{ .Name }}</a></h4>
+                    <p>{{ .Description }}</p>
+                    <a href="/project/{{ .Name }}" class="view-project">View Project</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        <div class="section">
+            <h3>Certificates</h3>
+            <div class="certificate-container">
+                {{ range .Certificates }}
+                <div class="certificate">
+                    <p><strong>{{ .Name }}</strong></p>
+                    <img src="/static/images/certificates/{{ .Image }}" alt="{{ .Name }}">
+                    <a href="{{ .Link }}" target="_blank">View Certificate</a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        <div class="section">
+            <h3>Language Proficiency</h3>
+            <div class="about-me">
+                <h4>Russian:</h4>
+                <p>Native</p>
+            </div>
+            <div class="about-me">
+                <h4>English:</h4>
+                <p>Intermediate ( B1 )</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Vasilov Ivan. All rights reserved.</p>
+    </footer>
+</body>
+</html>

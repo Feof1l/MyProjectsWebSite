@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #2e3d2f;
+    color: #d1d1d1;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: #1b2921;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Roboto Slab', serif;
+    color: #a8d0db;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header nav a {
+    margin: 0 15px;
+    color: #a8d0db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #f4a261;
+}
+
+h2, h3 {
+    color: #f4a261;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.section {
+    background: #39493f;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section h3 {
+    margin-top: 0;
+}
+
+.skill {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 0.9em;
+}
+
+a {
+    color: #a8d0db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #f4a261;
+    text-decoration: underline;
+}
+
+button {
+    background: #f4a261;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e76f51;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.about-me h4 {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    display: inline-block;
+    margin-right: 10px;
+}
+.company {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #9b7f68;
+    margin-bottom: 5px;
+}
+.about-me p {
+    margin: 0;
+    display: inline-block;
+}
+footer {
+    background: #1b2921;
+    padding: 10px 0;
+    text-align: center;
+    color: #a8d0db;
+    margin-top: 20px;
+}
+.certificate-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.certificate {
+    width: 45%;
+    margin-bottom: 20px;
+    text-align: center; /* Центрируем текст */
+}
+.contacts a {
+    color: #a8d0db;
+    text-decoration: none;
+    margin: 5px 0;
+}
+.certificate img {
+    width: 150px; /* Устанавливаем фиксированную ширину для изображения */
+    height: auto; /* Сохраняем пропорции */
+    display: block;
+    margin: 0 auto; /* Центрируем изображение */
+}
+
+.certificate a {
+    display: block;
+    margin-top: 10px;
+    color: #a8d0db;
+    font-weight: bold;
+}
+
+.certificate a:hover {
+    color: #f4a261;
+}
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    flex: 1 1 calc(50% - 20px);
+    background-color: #3b3b3b;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.project h3 {
+    color: #f39c12;
+    text-align: center;
+}
+
+.project .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project .button:hover {
+    background-color: #e67e22;
+}

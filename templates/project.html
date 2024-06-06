@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>{{ .Project.Name }}</h1>
+        <nav>
+            <a href="/">Home</a>
+            <!-- Add more links if needed -->
+        </nav>
+    </header>
+    <div class="container">
+        <div class="profile-info">
+            <h3>Description</h3>
+            <p>{{ .Project.Description }}</p>
+            <h3>Screenshots</h3>
+            {{ range .Project.Screenshots }}
+            <img src="/static/images/{{ . }}" alt="Screenshot">
+            {{ end }}
+            <p><a href="{{ .Project.GitHubLink }}">GitHub Repository</a></p>
+        </div>
+        <button onclick="window.history.back()">Back to home</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
