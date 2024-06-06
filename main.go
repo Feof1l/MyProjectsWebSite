@@ -59,7 +59,7 @@ var projects = []Project{
 		Name: "Infrastructure monitoring service ",
 		Description: `Creation of a microservice for monitoring the status of servers, virtual machines and stands, integration with a telegram
 		bot for data output`,
-		Screenshots: []string{"/MonitoringService/screenshot.png", "screenshot2.png"},
+		Screenshots: []string{"/MonitoringService/workMessage1.png", "/MonitoringService/workMessage2.png", "/MonitoringService/workMessage3.png", "/MonitoringService/configFile.png"},
 		Readme: `This project was written during an internship at Links Technologies. Its purpose is to check the stands, servers and virtual machines for their condition and workload. 
 		The data is displayed in the telegram bot. A customizable system of reminders for inspections has also been implemented.It is also possible to upload a config file.`,
 		GitHubLink: "https://github.com/Feof1l/infrastructure-tracking-service/tree/ver4.0",
