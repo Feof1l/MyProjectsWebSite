@@ -93,6 +93,13 @@ var projects = []Project{
 		Readme:      `A simple website for viewing the weather. To get information about the weather, you need to enter the desired city. The application works with the open weather api external API.`,
 		GitHubLink:  "https://github.com/Feof1l/WeatherApp",
 	},
+	{
+		Name:        "PythonGetAdress",
+		Description: `Python IP Address and Location Detection Tool`,
+		Screenshots: []string{"/IpAndLocation/mainWindow.png"},
+		Readme:      `This application uses the requests library to get information about your IP address, city, region of residence, as well as the country in which you are located.`,
+		GitHubLink:  "https://github.com/Feof1l/PythonGetAdress",
+	},
 }
 
 func main() {
