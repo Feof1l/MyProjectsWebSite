@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 	"runtime"
 	"strconv"
 	"time"
@@ -125,9 +126,6 @@ func main() {
 				Email:    "Ivan.vasilov.03@mail.ru",
 				Telegram: "https://t.me/feof1l",
 			},
-			/*"Name":           "Vasilov Ivan",
-			"Specialization": "Go-backend Developer",
-			"Location":       "Moscow, Russia",*/
 			"Education": Education{
 				University: "Moscow Power Engineering Institute ( MPEI )",
 				Department: "Applied Mathematics and AI",
@@ -197,21 +195,11 @@ func main() {
 		})
 	})
 
-	router.Run(":9090")
+	// Use PORT environment variable if set, otherwise default to 9090
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "9090"
+	}
+
+	router.Run(":" + port)
 }
-
-/*
-<section id="projects">
-            <h2>Projects</h2>
-            <div class="projects-container">
-                {{ range .Projects }}
-                <div class="project">
-                    <h3>{{ .Name }}</h3>
-                    <p>{{ .Description }}</p>
-                    <a href="/project/{{ .Name }}" class="button">View Project</a>
-                </div>
-                {{ end }}
-            </div>
-        </section>
-
-*/
