@@ -86,6 +86,13 @@ var projects = []Project{
 		Thus, this candidate meets the minimum requirements of the hiring company.`,
 		GitHubLink: "https://github.com/Feof1l/TelegramHrBot",
 	},
+	{
+		Name:        "WeatherApp",
+		Description: `A simple website for viewing the weather. To get information about the weather, you need to enter the desired city. The application works with the open weather api external API.`,
+		Screenshots: []string{"/WeatherApp/startWindow.png", "/WeatherApp/workWindow1.png", "/WeatherApp/workWindow2.png", "/WeatherApp/errorWindow.png"},
+		Readme:      `A simple website for viewing the weather. To get information about the weather, you need to enter the desired city. The application works with the open weather api external API.`,
+		GitHubLink:  "https://github.com/Feof1l/WeatherApp",
+	},
 }
 
 func main() {
